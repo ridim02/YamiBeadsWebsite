@@ -6,6 +6,11 @@
   margin-left: auto;
 }
 
+header{
+  height: 84px !important;
+  padding-bottom: 84px;
+}
+
 .logo_login{
     margin: auto;
     margin-top: 60px;

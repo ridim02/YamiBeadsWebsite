@@ -20,18 +20,20 @@
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
     <link rel="stylesheet" type="text/css" href="./css/maincss.css  ">
 	<link rel="stylesheet" type="text/css" href="./css/util.css">
+	<link rel="stylesheet" type="text/css" href="./css/dashboard.css">
 <!--===============================================================================================-->
 	<style>
-		body{
-				background-color: #cdc1ff;
-				background-image: linear-gradient(316deg, #cdc1ff 0%, #e5d9f2 74%);
-			}
+
+		#login-container{
+			background-color: #cdc1ff;
+			background-image: linear-gradient(316deg, #cdc1ff 0%, #e5d9f2 74%);
+		}
 	</style>	
 	<title>Login to Yami Beads! </title>
 </head>
 
 <!-- breadcrumb -->
-	<div class="container">
+	<div class="container" id="login-container">
 		<div class="bread-crumb flex-w p-l-25 p-r-15 p-t-30 p-lr-0-lg">
 			<a href="index.php" class="logo_login">
 				<img src="images/icons/logo-01.png" alt="IMG-LOGO">
