@@ -1,0 +1,55 @@
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    margin: 70px;
+    /* background-color: #CDC1FF; */
+}
+
+#left-content,
+#right-content {
+    flex: 1;
+    text-align: center;
+}
+
+/* #dashboard-container{
+    background-color: #cdc1ff;
+    background-image: linear-gradient(316deg, #cdc1ff 0%, #e5d9f2 74%);
+} */
+
+img {
+    height: 100%;
+    max-height: 100vh;
+}
+
+.btnBuyHere {
+    width: fit-content;
+    display: flex;
+    color: #fff;
+    min-width: 134px;
+    height: 43px;
+    background-color: #333;
+    border-radius: 21px;
+    padding-left: 25px;
+    padding-right: 15px;
+    padding-top: 7px;
+    margin-bottom: 2px;
+}
+
+.register {
+    font-family: Poppins-Medium;
+    color: #333;
+    background-color: #BCB6FF;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.supporting-quotes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: auto;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
