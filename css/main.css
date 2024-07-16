@@ -1,4 +1,4 @@
-.container{
+.container {
   width: 100%;
   padding-right: 7.5px;
   padding-left: 7.5px;
@@ -6,37 +6,37 @@
   margin-left: auto;
 }
 
-header{
+#header-container {
   height: 84px !important;
   padding-bottom: 84px;
 }
 
-.logo_login{
-    margin: auto;
-    margin-top: 60px;
-    margin-bottom: 50px;
-    width: 160px;
+.logo_login {
+  margin: auto;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  width: 160px;
 }
 
-.logo_login img{
-    width: 100%;
+.logo_login img {
+  width: 100%;
 }
 
-.login_text h4{
-    font-family: Poppins-Medium;
-    font-size: 13.5px;
-    font-weight: 600;
-    text-align: center;
-  }
+.login_text h4 {
+  font-family: Poppins-Medium;
+  font-size: 13.5px;
+  font-weight: 600;
+  text-align: center;
+}
 
-  .ltext-108 {
-    font-family: Poppins-Bold;
-    font-size: 26px;
-    line-height: 1.3846;
-  }
+.ltext-108 {
+  font-family: Poppins-Bold;
+  font-size: 26px;
+  line-height: 1.3846;
+}
 
-  .button_login_flex{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.button_login_flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
