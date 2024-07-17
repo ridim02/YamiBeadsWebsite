@@ -23,7 +23,7 @@
                 <br>
                 <p>Let your ears dance with delight and express your individuality through the timeless allure of our handmade earrings.</p>
                 <br>
-                <a href="bracelets.php" class="btnBuyHere trans-04 register" name="buylink" id="buylink">Buy here!</a>
+                <a href="product.php?search_product=earring" class="btnBuyHere trans-04 register" name="buylink" id="buylink">Buy here!</a>
             </div>
         </div>
         <div class="flex-container">
@@ -36,7 +36,7 @@
                 <br>
                 <p>Whether you’re dressing up for a special occasion or adding a touch of sophistication to your everyday look, our bracelets are the perfect companion.</p>
                 <br>
-                <a href="bracelets.php" class="btnBuyHere trans-04 register" name="buylink" id="buylink">Buy here!</a>
+                <a href="product.php?search_product=bracelet" class="btnBuyHere trans-04 register" name="buylink" id="buylink">Buy here!</a>
             </div>
             <div id="right-content" class="text-right" data-aos="fade-left">
                 <img src="./images/dashboard-bracelet.png" alt="dashboard-ring">
@@ -55,7 +55,7 @@
                 <br>
                 <p>Wear a story around your neck and let the world see the beauty and uniqueness that defines you.</p>
                 <br>
-                <a href="necklace.php" class="btnBuyHere trans-04 register" name="buylink" id="buylink">Buy here!</a>
+                <a href="product.php?search_product=necklace" class="btnBuyHere trans-04 register" name="buylink" id="buylink">Buy here!</a>
             </div>
         </div>
     </div>

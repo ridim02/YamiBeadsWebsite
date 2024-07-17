@@ -40,6 +40,10 @@ if (isset($_SESSION['login'])) {
 	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="./fonts/iconic/css/material-design-iconic-font.min.css">
 	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/MagnificPopup/magnific-popup.css">
+	<!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="./fonts/linearicons-v1.0.0/icon-font.min.css">
 	<!--===============================================================================================-->
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
@@ -57,9 +61,7 @@ if (isset($_SESSION['login'])) {
 		<div class="container-menu-desktop">
 			<div class="wrap-menu-desktop">
 				<nav class="limiter-menu-desktop container">
-
-					<!-- Logo desktop -->
-					<a href="index.php" class="logo" data-aos="fade-right" data-aos-duration="1000">
+					<a href="dashboard.php" class="logo" data-aos="fade-right" data-aos-duration="1000">
 						<img src="./images/icons/logo-01.png" alt="IMG-LOGO">
 					</a>
 
@@ -67,7 +69,7 @@ if (isset($_SESSION['login'])) {
 					<div class="menu-desktop" data-aos="fade-left" data-aos-duration="1000">
 						<ul class="main-menu">
 							<li class="active-menu">
-								<a href="index.php">Home</a>
+								<a href="dashboard.php">Home</a>
 							</li>
 							<li>
 								<a href="product.php">Shop</a>
@@ -97,7 +99,7 @@ if (isset($_SESSION['login'])) {
 									</a>
 								<?php } ?>
 								<li>
-									<h3><a href="product.php"><i class="zmdi zmdi-account-circle"></i></a></h3>
+									<h3><a><i class="zmdi zmdi-account-circle"></i></a></h3>
 									<ul class="sub-menu">
 										<li><a href="cart.php"><i class="zmdi zmdi-shopping-cart"></i> | My Cart</a>
 										</li>
