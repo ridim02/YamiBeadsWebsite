@@ -2,8 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    margin: 70px;
+    height: auto;
+    margin-left: 70px;
+    margin-right: 70px;
+
     /* background-color: #CDC1FF; */
 }
 
