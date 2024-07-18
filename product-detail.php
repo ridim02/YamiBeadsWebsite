@@ -67,7 +67,7 @@
             $_SESSION['num_product'] = $_POST['num_product'];
             $_SESSION['size_p'] = $_POST['size_select'];
             $_SESSION['color_p'] = $_POST['color_select'];
-            header('location:login_cart.php');
+            header('location:cart.php');
         }
     }
 
@@ -164,54 +164,6 @@
 
 
                     <form method="post" id="add_cart">
-                        <div class="p-t-33">
-                            <div class="flex-w flex-r-m p-b-10">
-                                <div class="size-203 flex-c-m respon6">
-                                    Size
-                                </div>
-
-                                <div class="size-204 respon6-next">
-                                    <div class="rs1-select2 bor8 bg0">
-                                        <select class="js-select2" name="size_select" required>
-                                            <option value="">Choose an option</option>
-
-                                            <?php
-                                            $size = explode(',', $row['size']);
-                                            $size_length = count($size);
-                                            ?>
-                                            <?php for ($i = 0; $i < $size_length; $i++) { ?>
-                                                <option value="<?php echo $size[$i]; ?>"><?php echo $size[$i]; ?></option>
-                                            <?php } ?>
-                                        </select>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="flex-w flex-r-m p-b-10">
-                                <div class="size-203 flex-c-m respon6">
-                                    Color
-                                </div>
-
-                                <div class="size-204 respon6-next">
-                                    <div class="rs1-select2 bor8 bg0">
-                                        <select class="js-select2" name="color_select" required>
-                                            <option value="">Choose an option</option>
-
-                                            <?php
-                                            $color = explode(',', $row['color']);
-                                            $color_length = count($color);
-                                            ?>
-                                            <?php for ($i = 0; $i < $color_length; $i++) { ?>
-                                                <option value="<?php echo $color[$i]; ?>"><?php echo $color[$i]; ?></option>
-                                            <?php } ?>
-                                        </select>
-                                        <div class="dropDownSelect2"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-
                             <div class="flex-w flex-r-m p-b-10">
                                 <div class="size-204 flex-w flex-m respon6-next">
                                     <input type="hidden" name="cart_id" value="<?php echo $row['id']; ?>">
