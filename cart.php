@@ -30,12 +30,15 @@
             $total_price = $total_price + $row_total['price'] * $row_total['num_product'];
         }
     }
+    else{
+        header('location:login.php');
+    }
 
     if (isset($_POST['buy'])) {
         if (isset($_SESSION['login'])) {
             header('location:order-now.php');
         } else {
-            header('location:login_cart.php');
+            header('location:login.php');
         }
     }
 ?>
