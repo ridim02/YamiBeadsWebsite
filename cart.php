@@ -109,10 +109,6 @@
                                                             <?php echo $row['name']; ?>
                                                     </div>
                                                     </a>
-                                                    <ul>
-                                                        <li><b>Size : </b><?php echo $row['size']; ?></li>
-                                                        <li><b>Color : </b><?php echo $row['color']; ?></li>
-                                                    </ul>
                                                 </td>
                                                 <td class="column-3">Rs.<?php echo $row['price']; ?></td>
                                                 <td class="column-4">
