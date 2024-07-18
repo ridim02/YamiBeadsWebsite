@@ -75,7 +75,7 @@ if (isset($_SESSION['login'])) {
 								<a href="product.php">Shop</a>
 							</li>
 							<li class="label1" data-label1="hot">
-								<a href="shoping-cart.php">Shopping Cart</a>
+								<a href="cart.php">Shopping Cart</a>
 							</li>
 							<li>
 								<a href="about.php">About</a>
