@@ -108,8 +108,6 @@ $row = mysqli_fetch_assoc($data);
     </section>
     
     <?php include_once 'footer.php'; ?>
-    
-    
     <?php include_once 'scripts.php'; ?>
 </body>
 </html>
