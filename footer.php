@@ -9,31 +9,23 @@
 
 	                <ul>
 	                    <li class="p-b-10">
-	                        <a href="women-product.php" class="stext-107 cl7 hov-cl1 trans-04">
+	                        <a href="product.php?search_product=bracelet" class="stext-107 cl7 hov-cl1 trans-04">
 	                            Bracelets
 	                        </a>
 	                    </li>
 
 	                    <li class="p-b-10">
-	                        <a href="men-product.php" class="stext-107 cl7 hov-cl1 trans-04">
+	                        <a href="product.php?search_product=necklace" class="stext-107 cl7 hov-cl1 trans-04">
 	                            Necklaces
 	                        </a>
 	                    </li>
 
 	                    <li class="p-b-10">
-	                        <a href="accessories-product.php" class="stext-107 cl7 hov-cl1 trans-04">
-	                            Rings
+	                        <a href="product.php?search_product=earring" class="stext-107 cl7 hov-cl1 trans-04">
+	                            Earrings
 	                        </a>
 	                    </li>
 	                </ul>
-	            </div>
-
-	            <div class="col-sm-6 col-lg-3 p-b-50">
-
-	            </div>
-
-	            <div class="col-sm-6 col-lg-3 p-b-50">
-
 	            </div>
 
 	            <div class="col-sm-6 col-lg-3 p-b-50">

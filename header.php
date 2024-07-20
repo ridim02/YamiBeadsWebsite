@@ -5,19 +5,6 @@ if (isset($_SESSION['login'])) {
 	$sql_select_login = "select * from `user_register` where `id`='$login_id'";
 	$data_login = mysqli_query($conn, $sql_select_login);
 	$row_login = mysqli_fetch_assoc($data_login);
-
-	$sql_select_cart = "select * from `cart` where `user_id`='$login_id'";
-	$data_cart = mysqli_query($conn, $sql_select_cart);
-
-	$amt_total = "select * from `cart` where `user_id`='$login_id'";
-	$data_total = mysqli_query($conn, $amt_total);
-
-	$total_price = 0;
-	while ($row_total = mysqli_fetch_assoc($data_total)) {
-		$total_price = $total_price + $row_total['price'] * $row_total['num_product'];
-	}
-
-	$data_count = mysqli_num_rows($data_total);
 }
 
 
@@ -102,7 +89,7 @@ if (isset($_SESSION['login'])) {
 									<ul class="sub-menu">
 										<li><a href="cart.php"><i class="zmdi zmdi-shopping-cart"></i> | My Cart</a>
 										</li>
-										<li><a href="orders.php"><i class="zmdi zmdi-collection-bookmark"></i> | My
+										<li><a href="order.php"><i class="zmdi zmdi-collection-bookmark"></i> | My
 												Orders</a></li>
 										<li><a href="logout.php"><i class="zmdi zmdi-open-in-new"></i> | Logout</a></li>
 									</ul>

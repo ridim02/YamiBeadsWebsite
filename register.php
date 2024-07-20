@@ -23,7 +23,7 @@ if (isset($_POST['register'])) {
                 $sql_insert = "insert into `user_register`(`name`,`email`,`mobile_number`,`password`)values('$name','$email','$mobile','$password1')";
                 mysqli_query($conn, $sql_insert);
 
-                header('location:login_home.php');
+                header('location:login.php');
             } else { ?>
                 <div style="text-align: center; color: red; padding-top:10px;">"Entered Mobile Number is already exist.... Please enter correct Mobile number or user Forgot Password option...."</div>
             <?php }

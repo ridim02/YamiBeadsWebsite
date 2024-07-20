@@ -10,33 +10,19 @@
     $data = mysqli_query($conn, $sql_select);
     $row = mysqli_fetch_assoc($data);
 
-    $sql_select_count = "select * from `product_comment` where `userid`='$detail_id'";
-    $data_count = mysqli_query($conn, $sql_select_count);
-    $comment_count = mysqli_num_rows($data_count);
-
-    $category_related = $row['category'];
-    $sql_select_related = "select * from `product` where `category`='$category_related' AND `stock`='In Stock'";
-    $data_related = mysqli_query($conn, $sql_select_related);
-
-    $sql_select_comment = "select * from `product_comment` where `userid`='$detail_id'";
-    $data_comment = mysqli_query($conn, $sql_select_comment);
-
-
     if (isset($_POST['cart_submit'])) {
         if (isset($_SESSION['login'])) {
 
             $user_id = $_SESSION['login'];
             $cart_id = $_POST['cart_id'];
             $product = $_POST['num_product'];
-            $size_p = $_POST['size_select'];
-            $color_p = $_POST['color_select'];
 
             if ($product > 0) {
                 $sql_select = "select * from `product` where `id`='$cart_id'";
                 $data = mysqli_query($conn, $sql_select);
                 $row = mysqli_fetch_assoc($data);
 
-                $sql_select_c = "select * from `cart` where `product_id`='$cart_id' and `user_id`='$user_id' and `size`='$size_p' and `color`='$color_p'";
+                $sql_select_c = "select * from `cart` where `product_id`='$cart_id' and `user_id`='$user_id'";
                 $data_c = mysqli_query($conn, $sql_select_c);
                 $row_count = mysqli_num_rows($data_c);
                 $row_data = mysqli_fetch_assoc($data_c);
@@ -55,7 +41,7 @@
 
                     header('location:cart.php');
                 } else {
-                    $sql_insert = "insert into `cart`(`product_id`,`user_id`,`name`,`price`,`num_product`,`image`,`size`,`color`)values('$product_id','$user_id','$name','$price','$product','$image','$size_p','$color_p')";
+                    $sql_insert = "insert into `cart`(`product_id`,`user_id`,`name`,`price`,`num_product`,`image`)values('$product_id','$user_id','$name','$price','$product','$image')";
                     mysqli_query($conn, $sql_insert);
 
                     header('location:cart.php');
@@ -65,8 +51,6 @@
         } else {
             $_SESSION['cart_id'] = $_POST['cart_id'];
             $_SESSION['num_product'] = $_POST['num_product'];
-            $_SESSION['size_p'] = $_POST['size_select'];
-            $_SESSION['color_p'] = $_POST['color_select'];
             header('location:cart.php');
         }
     }

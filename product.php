@@ -4,33 +4,14 @@
 
 <?php
 
-$_SESSION['short'] = 'default';
 
 $sql_select_data = "select * from `product` where `stock`='In Stock'";
 $data_data = mysqli_query($conn, $sql_select_data);
 
 if (isset($_GET['search_product'])) {
 	$search_pro = $_GET['search_product'];
-
-
 	$sql_select_data = "select * from `product` where `stock`='In Stock' AND (`name` like '%$search_pro%' OR `category` like '%$search_pro%' OR `tag` like '%$search_pro%' OR `one_line_title` like '%$search_pro%' OR `description` like '%$search_pro%')";
 	$data_data = mysqli_query($conn, $sql_select_data);
-
-	if (isset($_SESSION['short'])) {
-		if ($_SESSION['short'] == 'default') {
-			$sql_select = "select * from `product` where `stock`='In Stock' AND (`name` like '%$search_pro%' OR `category` like '%$search_pro%' OR `tag` like '%$search_pro%' OR `one_line_title` like '%$search_pro%' OR `description` like '%$search_pro%') order by `id` asc";
-		}
-		if ($_SESSION['short'] == 'newness') {
-			$sql_select = "select * from `product` where `stock`='In Stock' AND (`name` like '%$search_pro%' OR `category` like '%$search_pro%' OR `tag` like '%$search_pro%' OR `one_line_title` like '%$search_pro%' OR `description` like '%$search_pro%') order by `price` asc ";
-		}
-		if ($_SESSION['short'] == 'low_high') {
-			$sql_select = "select * from `product` where `stock`='In Stock' AND (`name` like '%$search_pro%' OR `category` like '%$search_pro%' OR `tag` like '%$search_pro%' OR `one_line_title` like '%$search_pro%' OR `description` like '%$search_pro%') ";
-		}
-		if ($_SESSION['short'] == 'high_low') {
-			$sql_select = "select * from `product` where `stock`='In Stock' AND (`name` like '%$search_pro%' OR `category` like '%$search_pro%' OR `tag` like '%$search_pro%' OR `one_line_title` like '%$search_pro%' OR `description` like '%$search_pro%') order by `price` desc ";
-		}
-	}
-	$data = mysqli_query($conn, $sql_select);
 }
 
 ?>
@@ -136,10 +117,6 @@ if (isset($_GET['search_product'])) {
 										<a href="product-detail.php?detail_id=<?php echo $row['id']; ?>"
 											class="stext-104 cl4 hov-cl1 trans-04 js-name-b2 p-b-6">
 											<?php echo $row['name']; ?>
-											<?php if (isset($_GET['search_product'])) { ?>
-												<input type="hidden" name="search_txt"
-													value="<?php echo $_GET['search_product']; ?>" id="srch_txt">
-											<?php } ?>
 	
 										</a>
 	

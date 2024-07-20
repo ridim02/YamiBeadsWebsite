@@ -15,32 +15,16 @@ if (isset($_GET['id'])) {
 
 if (isset($_SESSION['login'])) {
     $login_id = $_SESSION['login'];
-    $sql_select_login = "select * from `user_register` where `id`='$login_id'";
-    $data_login = mysqli_query($conn, $sql_select_login);
-    $row_login = mysqli_fetch_assoc($data_login);
 
     $sql_select = "select * from `cart` c left join `product` p on c.product_id = p.id where `user_id`='$login_id'";
     $data = mysqli_query($conn, $sql_select);
-
-    $sql_select_pro_id = "select `product_id` from `cart` where `user_id`='$login_id'";
-    $data_pro_id = mysqli_query($conn, $sql_select_pro_id);
-
-    while ($row = mysqli_fetch_assoc($data_pro_id)) {
-        $pro_id = $row['product_id'];
-
-        $sql_select = "select * from `product` where `id`='$pro_id'";
-        $data_price = mysqli_query($conn, $sql_select);
-    }
-
-
-
-    $amt_total = "select * from `cart` where `user_id`='$login_id'";
-    $data_total = mysqli_query($conn, $amt_total);
-
     $total_price = 0;
-    while ($row_total = mysqli_fetch_assoc($data_total)) {
-        $total_price = $total_price + $row_total['price'] * $row_total['num_product'];
+    $cart_items = [];
+    while ($row_total = mysqli_fetch_assoc($data)) {
+        $total_price += $row_total['price'] * $row_total['num_product'];
+        $cart_items[] = $row_total;
     }
+
 } else {
     header('location:login.php');
 }
@@ -56,7 +40,7 @@ if (isset($_POST['buy'])) {
 if (isset($_GET['d_id'])) {
     $id_d = $_GET['d_id'];
 
-    $sql_delete = "delete from `cart` where `id`='$id_d'";
+    $sql_delete = "delete from `cart` where `product_id`='$id_d' and `user_id`='$login_id'";
     mysqli_query($conn, $sql_delete);
 }
 
@@ -91,7 +75,7 @@ if (isset($_GET['d_id'])) {
 </head>
 
 <body>
-
+<?php include_once("./header.php"); ?>
     <div id="new_number_of_product">
         <form class="bg0 p-t-45 p-b-85" method="post">
             <div class="container">
@@ -109,7 +93,7 @@ if (isset($_GET['d_id'])) {
                                     </tr>
 
                                     <?php if (isset($_SESSION['login'])) {
-                                        while ($row = mysqli_fetch_assoc($data)) { ?>
+                                        foreach ($cart_items as $row) { ?>
                                             <tr class="table_row">
                                                 <td class="column-1" align="center">
 

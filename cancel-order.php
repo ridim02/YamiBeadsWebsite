@@ -102,7 +102,7 @@ else
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
 
-			<a href="shoping-cart.php" class="stext-109 cl8 hov-cl1 trans-04">
+			<a href="cart.php" class="stext-109 cl8 hov-cl1 trans-04">
 				Shoping Cart
 				<i class="fa fa-angle-right m-l-9 m-r-10" aria-hidden="true"></i>
 			</a>
@@ -163,10 +163,6 @@ else
 									</td>
 									<td class="column-2">
 										<div class="p-b-10"><?php echo $row['name']; ?></div>
-										<ul>
-											<li><b>Size : </b><?php echo $row['size']; ?></li>
-											<li><b>Color : </b><?php echo $row['color']; ?></li>
-										</ul>	
 									</td>
 									<td class="column-3">Rs.<?php echo $row['price']; ?></td>
 									<td class="column-4" align="center">
